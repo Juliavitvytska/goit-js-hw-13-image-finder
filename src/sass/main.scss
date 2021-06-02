@@ -1,11 +1,6 @@
 body{
-    margin: 15px;
+    margin: 15px 30px 15px 0;
     background-color: rgba(73, 29, 70, 0.068);
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 10px;
   }
 
   img {
@@ -19,18 +14,22 @@ body{
   }
 
   .gallery{
-    list-style: none;
-    margin-top: 0;
-    margin-bottom: 0;
     display: flex;
     justify-content: space-around;
     align-items: baseline;
     flex-wrap: wrap;
+
+    margin-top: 0;
+    margin-bottom: 0;
+
+    list-style: none;
   }
 
   .gallery-item{
-  border: 2px solid rgba(19, 6, 24, 0.548);
-  margin-bottom: 30px;
+    margin-bottom: 30px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 2px solid rgba(19, 6, 24, 0.548);
 
   &:hover{
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -42,13 +41,14 @@ body{
   }
 
   .img-container{
-    height: 200px;
+    height: 240px;
+    width: 410px;
     border: darkslategray;
     overflow: hidden;
   }
   
   .photo-card{
-    width: 350px;
+    width: 410px;
   }
     
   input {
