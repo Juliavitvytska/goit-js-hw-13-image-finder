@@ -1,1 +1,126 @@
-@import './example';
+body{
+    margin: 15px;
+    background-color: rgba(73, 29, 70, 0.068);
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  p{
+    margin: 0;
+  }
+
+  .gallery{
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    flex-wrap: wrap;
+  }
+
+  .gallery-item{
+  border: 2px solid rgba(19, 6, 24, 0.548);
+  margin-bottom: 30px;
+
+  &:hover{
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+  }
+
+  .img-container{
+    height: 200px;
+    border: darkslategray;
+    overflow: hidden;
+  }
+  
+  .photo-card{
+    width: 350px;
+  }
+    
+  input {
+    display: block;
+    width: 300px;
+    height: 35px;
+    border-radius: 5px;
+    background-color: rgba(73, 29, 70, 0.034);
+  }
+
+  .stats{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 30px 20px 10px 20px;
+  }
+
+  .stats-item{
+    display: flex;
+    align-items: flex-end;
+    justify-content: baseline;
+  }
+
+  .material-icons{
+    margin-right: 5px;
+    font-size: 14px;
+  }
+
+  .search-form{
+    display: block;
+    align-items: flex-start;
+    margin-bottom: 15px;
+  }
+
+  .form-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .js-button{
+    position: relative;
+    display: table;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    width: 140px;
+    height: 50px;
+    background-color: rgba(103, 51, 170, 0.425);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+
+.js-button:before {
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 50px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 5px;
+    transition: all 2s ease;
+}
+
+  .js-button:hover:before {
+    width: 100%;
+  }
+
+  .description-button{
+    color: rgb(131, 91, 43);
+    font-weight: 700;
+}
+
