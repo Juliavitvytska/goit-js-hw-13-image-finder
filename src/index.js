@@ -1,7 +1,9 @@
 import './sass/main.scss';
+
 import { error } from '@pnotify/core';
 import  '../node_modules/@pnotify/core/dist/PNotify.css';
 import '@pnotify/core/dist/BrightTheme.css';
+
 import _ from 'lodash';
 import * as basicLightbox from '../node_modules/basiclightbox/dist/basicLightbox.min.js';
 import '../node_modules/basiclightbox/dist/basicLightbox.min.css';
@@ -21,6 +23,7 @@ refs.btn.addEventListener('click', onLoadMore);
 async function onSearch(e){
     e.preventDefault();
     refs.container.innerHTML = '';
+    refs.btn.classList.add('button-hidden');
     picturesApiService.resetPage();
 
     picturesApiService.query = e.target.value;
@@ -33,8 +36,10 @@ async function onSearch(e){
         try {
             const data = await picturesApiService.fetchPictures();
             firstRenderPictures(data);
+            refs.btn.classList.remove('button-hidden');
 
             if (data.total === 0) {
+                refs.btn.classList.add('button-hidden');
                 notMatchesFound();
             }
 
