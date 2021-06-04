@@ -33,14 +33,21 @@ async function onSearch(e){
         return;
         }
 
+
+
         try {
             const data = await picturesApiService.fetchPictures();
-            firstRenderPictures(data);
             refs.btn.classList.remove('button-hidden');
+            firstRenderPictures(data);
 
             if (data.total === 0) {
                 refs.btn.classList.add('button-hidden');
                 notMatchesFound();
+            }
+            
+
+            if(data.total <= 12){
+               refs.btn.classList.add('button-hidden');
             }
 
             refs.container.addEventListener('click', modalIsOpen);
